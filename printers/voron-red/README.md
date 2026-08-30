@@ -15,27 +15,42 @@ This is a **starting point for this machine family**, not a drop-in for your pri
 - Nozzle bucket / scrub (purge disabled)
 - Stealthburner + chamber + electrical-bay LEDs
 
-## What was changed for this repo
+## In this folder now
 
-- Includes point at `Klicky/` in this folder (the Pi copy used `KlickyProbe/`).
-- `mainsail.cfg` and `timelapse.cfg` are commented out. They live on the Pi, not here.
-- Added an empty `Klicky/klicky-specific.cfg` so the Klicky include chain resolves.
+- `README.md`
+- `nitehawk-sbv2.cfg`
+- `Knomi2.cfg`
+- `Klicky/klicky-probe.cfg`
+- `Klicky/klicky-specific.cfg`
+- `Klicky/klicky-quad-gantry-level.cfg`
+
+## Still to drop in from the Pi / Voron-Red folder
+
+GitHub web UI: Add file → Upload files.
+
+- `printer.cfg` (main machine + PRINT_START/END + SAVE_CONFIG)
+- `nozzle_scrub-2.cfg`
+- `LED-Macros-Main.cfg`
+- `LED-Effects-Main.cfg`
+- `Klicky/klicky-macros.cfg`
+- `Klicky/klicky-variables.cfg`
+- `Klicky/klicky-bed-mesh-calibrate.cfg`
+
+If you upload `printer.cfg` from the Pi, change `KlickyProbe/` includes to `Klicky/` so it matches this folder, and leave `mainsail.cfg` / `timelapse.cfg` on the Pi.
 
 ## Do not copy blindly
 
 - `probe` `z_offset` in SAVE_CONFIG (this machine: 5.50)
 - Input shaper frequencies
 - PID values
-- Bed meshes (`60Temp-9x9-HB` / `90Temp-9x9-HB` names in PRINT_START — confirm those profiles exist before a hot start)
-- MCU `serial:` by-id paths (your boards will differ)
+- Bed meshes (`60Temp-9x9-HB` / `90Temp-9x9-HB` names in PRINT_START)
+- MCU `serial:` by-id paths
 
 ## Credit
 
-- [jlas1/Klicky-Probe](https://github.com/jlas1/Klicky-Probe) macros
-- LED effect pack included as used on this printer
+- [jlas1/Klicky-Probe](https://github.com/jlas1/Klicky-Probe)
+- LED effect pack as used on this printer
 - Klipper / Voron Design / BTT Nitehawk pin maps
-
-Original Field Pivot macros in `printer.cfg`: PRINT_START / PRINT_END, LOAD/UNLOAD_FILAMENT, G32 wiring to Klicky + Knomi + LEDs.
 
 ## License
 
