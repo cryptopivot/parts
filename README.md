@@ -2,9 +2,11 @@
 
 3D-printed replacement parts and jigs for kiosks, ATMs, lockers, and related field hardware.
 
-This repo is empty of models on purpose. It exists so the next clip, bushing, bezel, belt guide, or install jig has a home with print settings and a photo of the failed OEM part next to the printed one.
-
 Field Pivot does the field work. These files are what we actually print when OEM supply is dead or the wait is worse than making the piece.
+
+## Printer configs
+
+- [printers/voron-red](printers/voron-red/) — Klipper overlay for the shop Voron (Octopus Pro + Nitehawk, Klicky, LEDs). Starting point, not a drop-in.
 
 ## Rules
 
@@ -19,6 +21,7 @@ Field Pivot does the field work. These files are what we actually print when OEM
 ```
 parts/
   TEMPLATE.md
+  printers/<printer-name>/
   <machine>-<piece>/
     README.md
     *.stl / *.step
