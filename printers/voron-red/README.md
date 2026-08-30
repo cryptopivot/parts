@@ -24,12 +24,11 @@ This is a **starting point for this machine family**, not a drop-in. Copy struct
 - `nozzle_scrub-2.cfg`
 - `LED-Macros-Main.cfg`
 - `LED-Effects-Main.cfg`
-- `moonraker.conf`
 - `crowsnest.conf`
 - `KlipperScreen.conf` — lock PIN stripped; set it only on the Pi
 - `KlickyProbe/` — probe macros and this machine's dock numbers
 
-`printer.cfg` also includes `mainsail.cfg`, `timelapse.cfg`, and `led-test.cfg`. Those stay on the Pi. They are not part of this pack.
+`printer.cfg` also includes `mainsail.cfg`, `timelapse.cfg`, and `led-test.cfg`. Those, plus `moonraker.conf`, stay on the Pi. They are not part of this pack.
 
 ## Do not copy blindly
 
