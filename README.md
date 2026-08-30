@@ -4,6 +4,8 @@
 
 Field Pivot does the field work. These files are what we actually print when OEM supply is dead or the wait is worse than making the piece.
 
+Keywords: klipper, voron, voron-2.4, klicky, 3d-printing, stealthburner, nitehawk, field-service.
+
 ## Printer configs
 
 - [printers/voron-red](printers/voron-red/) — Klipper overlay for the shop Voron (Octopus Pro + Nitehawk, Klicky, LEDs). Starting point, not a drop-in.
