@@ -4,6 +4,8 @@ Working Klipper overlay from Field Pivot's Voron (shop name: Voron-Red).
 
 This is a **starting point for this machine family**, not a drop-in for your printer. Copy structure and macros. Do not copy the `SAVE_CONFIG` block (Z offset, input shaper, PID, bed mesh). Those are this printer's last tune.
 
+Klicky files live in `KlickyProbe/` so they match the includes in `printer.cfg` and `nozzle_scrub-2.cfg`. Upload the remaining files as they are.
+
 ## Hardware this file matches
 
 - Voron 2.4-class CoreXY, 300 mm square, Z max 260 mm
@@ -15,35 +17,17 @@ This is a **starting point for this machine family**, not a drop-in for your pri
 - Nozzle bucket / scrub (purge disabled)
 - Stealthburner + chamber + electrical-bay LEDs
 
-## In this folder now
+## Still to drop in
 
-- `README.md`
-- `nitehawk-sbv2.cfg`
-- `Knomi2.cfg`
-- `Klicky/klicky-probe.cfg`
-- `Klicky/klicky-specific.cfg`
-- `Klicky/klicky-quad-gantry-level.cfg`
-
-## Still to drop in from the Pi / Voron-Red folder
-
-GitHub web UI: Add file → Upload files.
-
-- `printer.cfg` (main machine + PRINT_START/END + SAVE_CONFIG)
+- `printer.cfg`
 - `nozzle_scrub-2.cfg`
-- `LED-Macros-Main.cfg`
 - `LED-Effects-Main.cfg`
-- `Klicky/klicky-macros.cfg`
-- `Klicky/klicky-variables.cfg`
-- `Klicky/klicky-bed-mesh-calibrate.cfg`
-
-If you upload `printer.cfg` from the Pi, change `KlickyProbe/` includes to `Klicky/` so it matches this folder, and leave `mainsail.cfg` / `timelapse.cfg` on the Pi.
+- `KlickyProbe/klicky-macros.cfg`
 
 ## Do not copy blindly
 
 - `probe` `z_offset` in SAVE_CONFIG (this machine: 5.50)
-- Input shaper frequencies
-- PID values
-- Bed meshes (`60Temp-9x9-HB` / `90Temp-9x9-HB` names in PRINT_START)
+- Input shaper frequencies, PID, bed meshes
 - MCU `serial:` by-id paths
 
 ## Credit
