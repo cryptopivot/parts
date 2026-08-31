@@ -14,6 +14,9 @@ This is a **starting point for this machine family**, not a drop-in. Copy struct
 - Knomi2 status hooks
 - Nozzle bucket / scrub
 - Stealthburner + chamber + electrical-bay LEDs
+- Electronics bay: Gdstime/Delta 6015 fans
+  - `MCU_Bay_fan` on PD13 (FAN3), PID, target 40 C
+  - `Pi5_Bay_fan` on PD12 (FAN2), watermark, target 38 C, max_delta 2 (on at 40 C, off at 36 C)
 - Pi camera via Crowsnest / spyglass (IMX708)
 
 ## In this folder
@@ -28,7 +31,7 @@ This is a **starting point for this machine family**, not a drop-in. Copy struct
 - `KlipperScreen.conf` — lock PIN stripped; set it only on the Pi
 - `KlickyProbe/` — probe macros and this machine's dock numbers
 
-`printer.cfg` also includes `mainsail.cfg`, `timelapse.cfg`, and `led-test.cfg`. Those, plus `moonraker.conf`, stay on the Pi. They are not part of this pack.
+`printer.cfg` also includes `mainsail.cfg` and `timelapse.cfg`. Those, plus `moonraker.conf` and `led-test.cfg`, stay on the Pi. `led-test.cfg` is commented out in `printer.cfg` until LED tests are active — a twinkle layer with cutoff 0 will crash Klipper at Ready.
 
 ## Do not copy blindly
 
