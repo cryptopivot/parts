@@ -11,7 +11,7 @@ This is a **starting point for this machine family**, not a drop-in. Copy struct
 - Stealthburner / Clockwork 2, Bondtech 5 mm gears, 0.6 mm nozzle
 - Klicky dockable probe (gantry / frame dock)
 - ADXL345 on the toolhead (`axes_map: x,z,y`)
-- Knomi2 status hooks
+- Knomi2 status hooks — custom no-sleep firmware: [cryptopivot/knomi2-nosleep](https://github.com/cryptopivot/knomi2-nosleep)
 - Nozzle bucket / scrub
 - Stealthburner + chamber + electrical-bay LEDs
 - Electronics bay: Gdstime/Delta 6015 fans
@@ -33,6 +33,12 @@ This is a **starting point for this machine family**, not a drop-in. Copy struct
 
 `printer.cfg` also includes `mainsail.cfg` and `timelapse.cfg`. Those, plus `moonraker.conf` and `led-test.cfg`, stay on the Pi. `led-test.cfg` is commented out in `printer.cfg` until LED tests are active — a twinkle layer with cutoff 0 will crash Klipper at Ready.
 
+## Knomi 2 firmware
+
+The screen on this printer runs stock BTT Knomi 2 plus `WiFi.setSleep(false)` so Moonraker updates are not delayed by ESP32 modem sleep.
+
+Repo + OTA bin notes: **[knomi2-nosleep](https://github.com/cryptopivot/knomi2-nosleep)**
+
 ## Do not copy blindly
 
 - `probe` `z_offset` in SAVE_CONFIG (this machine: 5.42)
@@ -45,6 +51,7 @@ This is a **starting point for this machine family**, not a drop-in. Copy struct
 - [jlas1/Klicky-Probe](https://github.com/jlas1/Klicky-Probe)
 - LED effect pack as used on this printer
 - Klipper / Voron Design / BTT Nitehawk / Mainsail Crew
+- Knomi firmware base: [bigtreetech/KNOMI](https://github.com/bigtreetech/KNOMI)
 
 ## License
 
